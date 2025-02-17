@@ -1,11 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberCraze | Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      background: #35424a;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Navigation */
+    nav {
+      background: #e8491d;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f4f4f4;
+    }
+
+    /* Container */
+    .container {
+      width: 85%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+    section {
+      padding: 2rem 0;
+    }
+
+    /* About & Contact Sections */
+    #about,
+    #contact {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    #about h2,
+    #contact h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .portfolio-item {
+      background: #fff;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+    }
+    .portfolio-item .content {
+      padding: 1rem;
+    }
+    .portfolio-item h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #35424a;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Portfolio</h1>
+  <header>
+    <h1>CyberCraze</h1>
+    <p>C++/Python Programmer | AI researcher | Computational Neurologist | Penetration Tester | Game Dev</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm CyberCraze, a passionate programmer having passions in the field of AI, Computational Neuroscience, Cybersecurity, Software and Game Developement. 
+      </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" />
+        <div class="content">
+          <h3>Project Title 1</h3>
+          <p>
+            A brief description of your project goes here, outlining the key
+            features and technologies used.
+          </p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" />
+        <div class="content">
+          <h3>Project Title 2</h3>
+          <p>
+            A brief description of your project goes here, outlining the key
+            features and technologies used.
+          </p>
+        </div>
+      </div>
+      <!-- Add more portfolio items as needed -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out if you'd like to work together or have any
+        questions. Email me at
+        <a href="mailto:cybercrazetech@gmail.com">cybercrazetech@gmail.com</a>.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CyberCraze. All rights reserved.</p>
+  </footer>
 </body>
 </html>
