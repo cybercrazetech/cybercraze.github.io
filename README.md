@@ -1,2 +1,2 @@
 # cybercraze.github.io
-personal portfolio
+Personal Portfolio
