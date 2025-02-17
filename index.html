@@ -20,71 +20,88 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      /* Dark gradient background for a futuristic vibe */
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #eee;
       line-height: 1.6;
     }
     a {
       color: inherit;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-
+    
+    /* Fade-in Animation */
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
     /* Header */
     header {
-      background: #35424a;
-      color: #fff;
+      background: linear-gradient(135deg, #141e30, #243b55);
       padding: 2rem 0;
       text-align: center;
     }
     header h1 {
       margin-bottom: 0.5rem;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
     header p {
       font-size: 1.2rem;
     }
-
+    
     /* Navigation */
     nav {
-      background: #e8491d;
+      background: rgba(232, 73, 29, 0.9);
       padding: 1rem;
       display: flex;
       justify-content: center;
     }
     nav a {
-      color: #fff;
       margin: 0 1rem;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #f4f4f4;
+      text-decoration: underline;
     }
-
+    
     /* Container */
     .container {
-      width: 85%;
+      width: 90%;
       max-width: 1200px;
       margin: 2rem auto;
     }
     section {
       padding: 2rem 0;
     }
-
+    
     /* About & Contact Sections */
     #about,
     #contact {
-      background: #fff;
+      background: rgba(0, 0, 0, 0.5);
       padding: 2rem;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem;
     }
     #about h2,
     #contact h2 {
       margin-bottom: 1rem;
+      color: #f4f4f4;
     }
-
+    #about p,
+    #contact p {
+      color: #ddd;
+    }
+    
     /* Portfolio Section */
     #portfolio {
       display: grid;
@@ -92,14 +109,15 @@
       gap: 2rem;
     }
     .portfolio-item {
-      background: #fff;
-      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .portfolio-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
     }
     .portfolio-item img {
       width: 100%;
@@ -110,17 +128,22 @@
     }
     .portfolio-item h3 {
       margin-bottom: 0.5rem;
+      color: #fff;
     }
-
+    .portfolio-item p {
+      color: #ccc;
+    }
+    
     /* Footer */
     footer {
-      background: #35424a;
-      color: #fff;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #eee;
       text-align: center;
       padding: 1rem 0;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
-
+    
     /* Responsive Navigation */
     @media (max-width: 768px) {
       nav {
@@ -133,12 +156,12 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>CyberCraze</h1>
-    <p>C++/Python Programmer | AI researcher | Computational Neurologist | Penetration Tester | Game Dev</p>
+    <p>C++/Python Programmer | AI Researcher | Computational Neurologist | Penetration Tester | Game Dev</p>
   </header>
 
-  <nav>
+  <nav class="fade-in">
     <a href="#about">About</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
@@ -146,22 +169,21 @@
 
   <div class="container">
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="fade-in">
       <h2>About Me</h2>
       <p>
-        Hello! I'm CyberCraze, a passionate programmer having passions in the field of AI, Computational Neuroscience, Cybersecurity, Software and Game Developement. 
+        Hello! I'm CyberCraze, a passionate programmer with diverse interests in AI, computational neuroscience, cybersecurity, software, and game development. I strive to blend creativity with technical expertise to push the boundaries of technology.
       </p>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="fade-in">
       <div class="portfolio-item">
         <img src="https://via.placeholder.com/400x250" alt="Project 1" />
         <div class="content">
           <h3>Project Title 1</h3>
           <p>
-            A brief description of your project goes here, outlining the key
-            features and technologies used.
+            A brief description of the project goes here, highlighting key features, innovative approaches, and technologies used.
           </p>
         </div>
       </div>
@@ -170,8 +192,7 @@
         <div class="content">
           <h3>Project Title 2</h3>
           <p>
-            A brief description of your project goes here, outlining the key
-            features and technologies used.
+            A brief description of the project goes here, highlighting key features, innovative approaches, and technologies used.
           </p>
         </div>
       </div>
@@ -179,18 +200,27 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade-in">
       <h2>Contact</h2>
       <p>
-        Feel free to reach out if you'd like to work together or have any
-        questions. Email me at
+        Interested in collaborating or have questions? Reach out via email at
         <a href="mailto:cybercrazetech@gmail.com">cybercrazetech@gmail.com</a>.
       </p>
     </section>
   </div>
 
-  <footer>
+  <footer class="fade-in">
     <p>&copy; 2025 CyberCraze. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Optional: Stagger the fade-in animation on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, index) => {
+        el.style.animationDelay = index * 0.3 + 's';
+      });
+    });
+  </script>
 </body>
 </html>
